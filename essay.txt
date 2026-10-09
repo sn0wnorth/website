@@ -1,0 +1,32 @@
+1.Library's Purpose and Problem Solved:
+Pillow (Python Imaging Library / PIL) is a third-party library used for opening, manipulating, and saving image files. Standard Python does not have built-in features to edit images directly. Pillow solves this problem by allowing users to resize images, crop them, convert formats, apply filters, and adjust visual properties with simple Python code.
+
+2. Installation Instructions and version used:
+To install Pillow, run the following command in the terminal:
+pip install Pillow
+Version used: Pillow 10.2.0
+
+3. Official Documentation Link:
+https://pillow.readthedocs.io/
+
+4. Specific Functions and Classes Used:
+- Image (class): Used to create, open, and modify image objects.
+- Image.new(): Creates a new blank image.
+- ImageDraw.Draw (class): Allows drawing shapes and text on an image.
+- ImageFilter (module): Contains built-in filters (e.g., ImageFilter.BLUR).
+- img.resize(): Changes the dimensions of an image.
+- img.filter(): Applies a filter to an image.
+- img.save(): Saves the image to a file.
+
+5. Worked Example, Input, and Expected Output:
+In sample.py:
+- Input: We create a 400x400 red square image with a blue circle drawn in the center.
+- Processing: We resize the image from 400x400 to 200x200, apply a blur filter, and save it.
+- Expected Output: A new file named 'output_blurred.png' is saved. The image is 200x200 pixels, showing a blurred blue circle on a red background.
+
+6. How you checked that the result was correct:
+I checked the result by running sample.py and verifying that 'output_blurred.png' was created in the directory. I checked its properties to confirm the 200x200 size and opened the image to see that the blur effect was visibly applied.
+
+7. Limitations:
+- Pillow is good for basic to moderate image processing, but it is not designed for heavy computer vision tasks or deep learning.
+- It does not support vector graphics (like SVG) very well compared to raster formats.
